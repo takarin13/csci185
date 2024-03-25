@@ -137,10 +137,6 @@ footer{
     margin-bottom: 20px;
 }
 
-.analisis a{
-    
-}
-
 @media (max-width: 520px){
     header{
         display: grid;
