@@ -152,7 +152,7 @@ footer{
         line-height: 1.4em;
         text-align: center;
         grid-column: 2/4;
-        grid-row: 1/2
+        grid-row: 1/2;
     }
     
     nav{
@@ -161,9 +161,18 @@ footer{
     }
 
     .soccer{
-        
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .soccer h2, .soccer p{
+       margin-left: 0px; 
     }
     
+    .soccer nav{
+        margin-right: 90px;
+    }
+
     .soccer img{
         width: 500px
     }
@@ -194,7 +203,7 @@ footer{
 
     .result img{
         width: 300px;
-        margin-left: 40px;
+        margin-left: 100px;
         margin-bottom: 10px;
     }
 
@@ -204,8 +213,12 @@ footer{
 
     .team-sheet img{
         width: 300px;
-        margin-left: 40px;
+        margin-left: 100px;
         margin-bottom: 10px;
         grid-column: 1/2;
+    }
+
+    .analisis a{
+        margin-left: 50px;
     }
 }
