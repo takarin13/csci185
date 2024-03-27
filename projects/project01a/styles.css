@@ -161,8 +161,7 @@ footer{
     }
 
     .soccer{
-        display: grid;
-        grid-template-columns: 1fr;
+        
     }
     
     .soccer img{
