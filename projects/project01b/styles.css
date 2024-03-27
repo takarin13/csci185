@@ -24,9 +24,8 @@ header{
 }
 
 header img, header > a{
-    width: 250px;
-    grid-column: 2/3;
-    margin-left: 150px;
+    width: 220px;
+    grid-column: 1/2;
     margin-bottom: -20px;
 }
 
@@ -35,7 +34,8 @@ h1{
     font-size: 2.8em;
     line-height: 1.4em;
     text-align: center;
-    grid-column:2/3
+    grid-column:2/4;
+    grid-row: 1/2;
 }
 
 nav{
@@ -152,14 +152,81 @@ footer{
     margin-left: 0px;
 }
 
-@media (max-width: 900px){
+@media (max-width: 1284px){
+    
+
+    .soccer{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    .soccer img{
+        width: 1000px;
+    }
+    
+    .soccer h2, .soccer p{
+        margin-left: 0px;
+    }
+
+    .soccer nav{
+        margin-right: 90px;
+    }
+
+    h2{
+        margin-left: 0px;
+    }
+
+    section p{
+        margin-left: 0px;
+    }
+
+    section > nav > a{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        margin-left: 100px;
+    }
+
+    .result h2, .team-sheet h2, .analisis h2{
+        font-size: 1.3em;
+    }
+
+    .result p{
+        font-size: 2em;
+        margin-left: 0px;
+    }
+
+    .result img{
+        width: 300px;
+        margin-left: 100px;
+        margin-bottom: 10px;
+    }
+
+    .team-sheet{
+        grid-template-columns: 1fr;
+
+    }
+
+    .team-sheet img{
+        width: 300px;
+        margin-left: 100px;
+        margin-bottom: 10px;
+        grid-column: 1/2;
+    }
+
+    .analisis a{
+        margin-left: 70px;
+    }
+}
+
+@media (max-width: 700px){
     header{
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
     }
     
     header img, header > a{
-        width: 170px;
+        width: 140px;
         grid-column: 1/2;
         margin-left: 0px;
     }
