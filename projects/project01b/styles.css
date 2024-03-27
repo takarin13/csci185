@@ -115,6 +115,9 @@ footer{
 .result{
     background: white;
     padding: 50px 15vw 100px 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .result p{
@@ -122,34 +125,51 @@ footer{
 }
 
 .result img{
-    width: 600px;
-    margin-left: 220px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.film{
+    background: white;
+    padding: 50px 15vw 100px 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.film img{
+    width: 300px;
     margin-bottom: 20px;
 }
 
 .team-sheet{
     background: white;
     padding: 50px 15vw 100px 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .team-sheet img{
-    width: 600px;
-    margin-left: 220px;
+    width: 300px;
     margin-bottom: 20px;
 }
 
 .analisis{
     background: white;
     padding: 50px 15vw 100px 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.analisis a, .result a{
+.analisis a{
     display: flex;
-    margin-left: 350px;
+    margin-left: 120px;
 }
 
 .result a{
-    margin-left: 0px;
+   margin-left: 250px;
 }
 
 @media (max-width: 1284px){
@@ -161,7 +181,7 @@ footer{
     }
     
     .soccer img{
-        width: 1000px;
+        width: 900px;
     }
     
     .soccer h2, .soccer p{
@@ -187,36 +207,36 @@ footer{
         margin-left: 100px;
     }
 
-    .result h2, .team-sheet h2, .analisis h2{
+    .result h2, .film h2, .team-sheet h2, .analisis h2{
         font-size: 1.3em;
     }
 
     .result p{
         font-size: 2em;
-        margin-left: 0px;
     }
 
     .result img{
         width: 300px;
-        margin-left: 100px;
         margin-bottom: 10px;
     }
 
-    .team-sheet{
-        grid-template-columns: 1fr;
-
+    .film img{
+        width: 300px;
+        margin-bottom: 10px;
     }
 
     .team-sheet img{
         width: 300px;
-        margin-left: 100px;
         margin-bottom: 10px;
-        grid-column: 1/2;
     }
 
     .analisis a{
-        margin-left: 70px;
+        margin-left: 100px;
     }
+
+    .result a{
+        margin-left: 200px;
+     }
 }
 
 @media (max-width: 700px){
@@ -283,28 +303,28 @@ footer{
 
     .result p{
         font-size: 2em;
-        margin-left: 0px;
     }
 
     .result img{
-        width: 300px;
-        margin-left: 100px;
+        width: 200px;
         margin-bottom: 10px;
     }
 
-    .team-sheet{
-        grid-template-columns: 1fr;
-
+    .film img{
+        width: 200px;
+        margin-bottom: 10px;
     }
 
     .team-sheet img{
-        width: 300px;
-        margin-left: 100px;
+        width: 200px;
         margin-bottom: 10px;
-        grid-column: 1/2;
     }
 
     .analisis a{
         margin-left: 70px;
     }
+
+    .result a{
+        margin-left: 170px;
+     }
 }
