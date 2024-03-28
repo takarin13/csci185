@@ -129,6 +129,10 @@ footer{
     margin-bottom: 20px;
 }
 
+.result a{
+    margin-left: 240px;
+ }
+
 .film{
     background: white;
     padding: 50px 15vw 100px 15vw;
@@ -166,10 +170,6 @@ footer{
 .analisis a{
     display: flex;
     margin-left: 120px;
-}
-
-.result a{
-   margin-left: 250px;
 }
 
 @media (max-width: 1284px){
@@ -235,7 +235,7 @@ footer{
     }
 
     .result a{
-        margin-left: 200px;
+        margin-left: 180px;
      }
 }
 
