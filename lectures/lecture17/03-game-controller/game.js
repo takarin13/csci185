@@ -22,7 +22,11 @@ function drawPlayer() {
 function movePlayer(ev) {
     // open the console in your browser to see what happens :)
     console.log(ev.code);
+    if (ev.code === "ArrowUP"){
+        y = y-5
+    }
 
+    else if (ev.code === "ArrowDown")
     // re-draw the player
     drawPlayer();
 }

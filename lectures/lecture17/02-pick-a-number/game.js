@@ -9,5 +9,17 @@ console.log(secret);
 
 // Your task:
 function check() {
-    // your code here
+    document.querySelector("#guess").value;
+    
+    //console.log("CHECK!!!!")
+
+    if (guess > secret){
+        console.log("Too high")
+    }
+    if (guess < secret){
+        console.log("Too low")
+    }
+    if (guess === secret){
+        console.log("You win!")
+    }
 }
