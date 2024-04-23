@@ -16,25 +16,27 @@ let idx = 0;
 function showImage() {
     console.log("Show image", idx);
     const img = document.querySelector("#the_image");
-    const caption = document.querySelector("#caption");
+    const caption = document.querySelector(".caption");
     img.src = photos[idx]
     caption.textContent = (idx + 1) + ' of ' + photos.length;
 }
 
 function forward() {
-    //console.log('forward');
-    idx += 1;
-    //console.log(idx);
-    showImage();
-    for (let i = 0; i < photos.length; i++){
-        let template = `<div class = "forward" ("${images[i]}")></div>`;
-        document.querySelector("#the_image").insertAdjacentHTML("beforeend, template);")
+    if(idx === 9){
+        idx=0;
     }
+    else{idx += 1;
+    }
+    showImage();
 }
 
 function back() {
-    //console.log('back');
-    idx -= 1;
+    if(idx === 0){
+        idx = 9
+    }
+    else{
+        idx -= 1;
+    }
     //console.log(idx);
     showImage();
     for (let i = 0; i < photos.length; i++){

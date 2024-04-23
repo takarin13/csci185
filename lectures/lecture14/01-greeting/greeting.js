@@ -1,7 +1,9 @@
 function sayHello() {
-    document.querySelector('#message').innerHTML = '<p>Hello!</p>';
+    const myElement = document.querySelector("#message");
+    myElement.innerHTML = "<strong>Hello!</strong>";
 }
 
 function sayGoodbye() {
-    document.querySelector('#message').innerHTML = '<p>Goodbye!</p>';
+    const myElement = document.querySelector("#message");
+    myElement.innerHTML = "<strong>Goodbye!</strong>";
 }
