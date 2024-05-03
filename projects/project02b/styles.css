@@ -1,19 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Jersey+10&family=Jersey+15&display=swap');
 
-#score {
+#score, p{
     font-size: 30px;
     font-weight: 700;
     color:black;
     position: absolute;
     top: 250px;
-    left: 200px;
+    left: 250px;
     font-family: "Acme", sans-serif;
     font-weight: 400;
     font-style: normal;
-      
 }
 
 #gameOver {
+    font-size: 100px;
+    color: black;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#clear {
     font-size: 100px;
     color: black;
     position: absolute;

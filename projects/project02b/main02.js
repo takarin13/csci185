@@ -1,4 +1,3 @@
-
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
@@ -6,8 +5,7 @@ const carWidth = 50;
 const carHeight = 80;
 let obstacleWidth = randomInt(100,500);
 let obstacleHeight = randomInt(50,100);
-
-let carX = canvas.width / 2;
+let carX = canvas.width / 2 - carWidth / 2;
 let carY = canvas.height - carHeight - 10;
 let obstacleX = Math.random() * (canvas.width - obstacleWidth);
 let obstacleY = -obstacleHeight;
@@ -32,22 +30,39 @@ function drawScore() {
     document.querySelector("#score").innerHTML= "Score: " + score;
   }
   
-  function drawGameOverText() {
-    document.querySelector("#gameOver").innerHTML= "Game Over";
-  }
+function drawGameOver() {
+    
+    if (gameOver === true){
+        document.querySelector("#gameOver").innerHTML= "Game Over";
+    }
+    else {
+        document.querySelector("#gameOver").innerHTML= "";
+    }
+}
+
+function drawClear() {
+    
+    if (score == 20){
+        document.querySelector("#clear").innerHTML= "Clear!!";
+        gameover == true;
+    }
+    else if (gameOver == false){
+        document.querySelector("#clear").innerHTML= "";
+    }
+}
 
 function moveObstacle() {
-    obstacleY += 5;
+    obstacleY += 4;
     if (obstacleY > canvas.height) {
         obstacleX = Math.random() * (canvas.width - obstacleWidth);
         obstacleY = -obstacleHeight;
         score++;
         obstacleWidth = randomInt(100,500);
-        obstacleHeight = randomInt(50,500);
+        obstacleHeight = randomInt(50,400);
     }
 }
 
-function checkCollision() {
+function check() {
     if (carX < obstacleX + obstacleWidth &&
         carX + carWidth > obstacleX &&
         carY < obstacleY + obstacleHeight &&
@@ -56,26 +71,50 @@ function checkCollision() {
     }
 }
 
-function draw() {
+function game() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawCar();
     drawObstacle();
     drawScore();
+    drawGameOver();
+    drawClear();
     moveObstacle();
-    checkCollision();
+    check();
     if (gameOver === false) {
-        requestAnimationFrame(draw);
-    } else {
-        drawGameOverText();
+        requestAnimationFrame(game)
+    } else if(gameOver === true){
+        drawGameOver();
     }
 }
 
 document.addEventListener("keydown", function (event) {
-    if (event.key === "ArrowLeft" && carX > 0) {
-        carX -= 10;
+    if (event.key === "Enter"){
+        score = 0;
+        gameOver = false;
+        carX = canvas.width / 2 - carWidth / 2;
+        carY = canvas.height - carHeight - 10;
+        obstacleX = Math.random() * (canvas.width - obstacleWidth);
+        obstacleY = -obstacleHeight;
+        game();
+    }
+    else if (event.key === "ArrowLeft" && carX > 0) {
+        carX -= 15;
     } else if (event.key === "ArrowRight" && carX < canvas.width - carWidth) {
-        carX += 10;
+        carX += 15;
     }
 });
 
-draw();
+
+const bts = [
+    {
+        nickname: 'RM',
+        name:{ english:`Kim Nam Joon`, Korean:`aiueo` },
+        specialties:[`Visual`, `Vocalist`]
+    },
+    {
+        nickname: 'TM',
+        name:{ english:`Tim Nam Joon`, Korean:`kakikukeko` },
+        specialties:[`Visual`, `Vocalist`]
+    }
+]
+

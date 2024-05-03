@@ -3,8 +3,8 @@ const ctx = canvas.getContext("2d");
 
 const carWidth = 50;
 const carHeight = 80;
-let obstacleWidth = randomInt(100, 500);
-let obstacleHeight = randomInt(50, 500);
+let obstacleWidth = 200;
+let obstacleHeight = 50;
 let carX = canvas.width / 2 - carWidth / 2;
 let carY = canvas.height - carHeight - 10;
 let obstacleX = Math.random() * (canvas.width - obstacleWidth);
@@ -40,18 +40,25 @@ function drawGameOver() {
     }
 }
 
-function cleardrawGameOver(){
-    document.querySelector("#gameOver").innerHTML= "";
+function drawClear() {
+    
+    if (score == 20){
+        document.querySelector("#clear").innerHTML= "Clear!!";
+        gameover == true;
+    }
+    else if (gameOver == false){
+        document.querySelector("#clear").innerHTML= "";
+    }
 }
 
 function moveObstacle() {
-    obstacleY += 5;
+    obstacleY += 4;
     if (obstacleY > canvas.height) {
         obstacleX = Math.random() * (canvas.width - obstacleWidth);
         obstacleY = -obstacleHeight;
         score++;
-        obstacleWidth = randomInt(100, 500);
-        obstacleHeight = randomInt(50, 500);
+        obstacleWidth = 200;
+        obstacleHeight = 50;
     }
 }
 
@@ -70,6 +77,7 @@ function game() {
     drawObstacle();
     drawScore();
     drawGameOver();
+    drawClear();
     moveObstacle();
     check();
     if (gameOver === false) {
